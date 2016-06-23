@@ -48,9 +48,6 @@ const onShowProjects = (event) => {
 const addHandlers = () => {
   $('#create').on('submit', onCreateProject);
   $('#show').on('click', onShowProjects);
-  // $('#sign-in').on('submit', onSignIn);
-  // $('#sign-out').on('submit', onSignOut);
-  // $('#change-password').on('submit', onChangePassword);
 };
 //
 module.exports = {
