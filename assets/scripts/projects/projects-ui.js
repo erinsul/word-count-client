@@ -16,6 +16,11 @@ const displayProjects = (projects) => {
   $('#content').html(titleListingTemplate(projects));
 };
 
+const displayProjectDetails = (project) =>{
+  let projectDisplay = require('../templates/project.handlebars');
+  $('#content').html(projectDisplay(project))
+};
+
 const failure = (error) => {
   console.error(error);
 };
@@ -24,4 +29,5 @@ module.exports = {
   success,
   failure,
   displayProjects,
+  displayProjectDetails
 };

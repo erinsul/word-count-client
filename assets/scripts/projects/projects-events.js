@@ -25,7 +25,10 @@ const onShowProjects = (event) => {
 const onProjectDetails = () => {
   event.preventDefault();
   api.showProjectDetails(event.target.id)
-  .done(ui.success)
+  .done(function(data){
+    console.log(data);
+    ui.displayProjectDetails(data);
+  })
 };
 
 // const onSignIn = (event) => {
