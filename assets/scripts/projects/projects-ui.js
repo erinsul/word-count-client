@@ -2,6 +2,7 @@
 
 const app = require('../app.js');
 
+
 const success = (data) => {
   if (data) {
     console.log(data);
@@ -12,8 +13,8 @@ const success = (data) => {
 
 const displayProjects = (projects) => {
   let titleListingTemplate = require('../templates/title-listing.handlebars');
-  $('.content').html(titleListingTemplate(projects));
-}
+  $('#content').html(titleListingTemplate(projects));
+};
 
 const failure = (error) => {
   console.error(error);

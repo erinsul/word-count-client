@@ -22,6 +22,12 @@ const onShowProjects = (event) => {
   });
 };
 
+const onProjectDetails = () => {
+  event.preventDefault();
+  api.showProjectDetails(event.target.id)
+  .done(ui.success)
+};
+
 // const onSignIn = (event) => {
 //   event.preventDefault();
 //   let data = getFormFields(event.target);
@@ -49,8 +55,10 @@ const onShowProjects = (event) => {
 const addHandlers = () => {
   $('#create').on('submit', onCreateProject);
   $('#show').on('click', onShowProjects);
+  $('#content').on('click', '.view', onProjectDetails);
 };
 //
 module.exports = {
   addHandlers,
+  onProjectDetails
 };

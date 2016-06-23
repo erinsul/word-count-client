@@ -23,7 +23,19 @@ const showProjects = () => {
   });
 };
 
+const showProjectDetails = (id) =>{
+  let singleURL = app.host + '/projects/' + id;
+  return $.ajax({
+    url: singleURL,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 module.exports = {
   createProject,
   showProjects,
+  showProjectDetails
 };
