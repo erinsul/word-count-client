@@ -17,11 +17,14 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(app.user);
+  $('.user-only').show();
 };
 
 const signOutSuccess = () => {
   console.log('User signed out successfully');
   app.user = null;
+  $('.user-only').hide();
+  $('.content').html('');
 };
 
 module.exports = {

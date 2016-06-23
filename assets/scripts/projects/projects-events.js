@@ -17,8 +17,9 @@ const onCreateProject = (event) => {
 const onShowProjects = (event) => {
   event.preventDefault();
   api.showProjects()
-  .done(ui.success)
-  .fail(ui.failure);
+  .done(function(data){
+    ui.displayProjects(data);
+  });
 };
 
 // const onSignIn = (event) => {

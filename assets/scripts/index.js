@@ -8,6 +8,7 @@ const authEvents = require('./auth/events.js');
 const projectEvents = require('./projects/projects-events.js');
 
 $(() => {
+  $('.user-only').hide();
   authEvents.addHandlers();
   projectEvents.addHandlers();
 });
