@@ -17,48 +17,27 @@ const onCreateProject = (event) => {
 const onShowProjects = (event) => {
   event.preventDefault();
   api.showProjects()
-  .done(function(data){
-    ui.displayProjects(data);
-  });
+  .done(ui.displayProjects);
 };
 
 const onProjectDetails = () => {
   event.preventDefault();
-  api.showProjectDetails(event.target.id)
-  .done(function(data){
-    console.log(data);
-    ui.displayProjectDetails(data);
-  })
+  api.showProjectDetails($(event.target).data('id'))
+  .done(ui.displayProjectDetails);
 };
 
-// const onSignIn = (event) => {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   api.signIn(data)
-//   .done(ui.signInSuccess)
-//   .fail(ui.failure);
-// };
-//
-// const onSignOut = (event) => {
-//   event.preventDefault();
-//   api.signOut()
-//   .done(ui.signOutSuccess)
-//   .fail(ui.failure);
-// };
-//
-// const onChangePassword = (event) => {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   api.changePassword(data)
-//   .done(ui.success)
-//   .fail(ui.failure);
-// };
+const onProjectDelete = () => {
+  event.preventDefault();
+  api.deleteProject($(event.target).data('id'))
+  .done($(event.target).parent().remove());
+};
 
 
 const addHandlers = () => {
   $('#create').on('submit', onCreateProject);
   $('#show').on('click', onShowProjects);
   $('#content').on('click', '.view', onProjectDetails);
+  $('#content').on('click', '.delete', onProjectDelete);
 };
 //
 module.exports = {

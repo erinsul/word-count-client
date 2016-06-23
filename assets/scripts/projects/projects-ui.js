@@ -21,6 +21,12 @@ const displayProjectDetails = (project) =>{
   $('#content').html(projectDisplay(project))
 };
 
+const displayDelete = (id) =>{
+  console.log(id)
+  console.log("success")
+  $('').hide()
+}
+
 const failure = (error) => {
   console.error(error);
 };

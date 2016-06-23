@@ -24,10 +24,19 @@ const showProjects = () => {
 };
 
 const showProjectDetails = (id) =>{
-  let singleURL = app.host + '/projects/' + id;
   return $.ajax({
-    url: singleURL,
+    url: app.host + '/projects/' + id,
     method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
+const deleteProject = (id) =>{
+  return $.ajax({
+    url: app.host + '/projects/' + id,
+    method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
@@ -37,5 +46,6 @@ const showProjectDetails = (id) =>{
 module.exports = {
   createProject,
   showProjects,
-  showProjectDetails
+  showProjectDetails,
+  deleteProject,
 };
