@@ -43,9 +43,21 @@ const deleteProject = (id) =>{
   });
 };
 
+const updateProject = (data, id) => {
+  return $.ajax({
+    url: app.host + '/projects/' + id,
+    method: "PATCH",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data,
+  });
+};
+
 module.exports = {
   createProject,
   showProjects,
   showProjectDetails,
   deleteProject,
+  updateProject
 };

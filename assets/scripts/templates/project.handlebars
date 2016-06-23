@@ -2,11 +2,32 @@
   <h1>{{title}}</h1>
     <div>
       <h3>Due on: {{end_date}}</h3>
+      <form class="update" data-id={{id}}>
+        <fieldset>
+          <legend>Update your deadline:</legend>
+          <input type="text" name="projects[end_date]" placeholder="target end date">
+          <input type="submit" name="submit" value="Update">
+        </fieldset>
+      </form>
       <h3>Days left: </h3>
       <h3>Current word count: {{current_word_count}}</h3>
+      <form class="update" data-id={{id}}>
+        <fieldset>
+          <legend>Update your word count:</legend>
+          <input type="text" name="projects[current_word_count]" placeholder="current word count">
+          <input type="submit" name="submit" value="Update">
+        </fieldset>
+      </form>
       <h3>Words remaining: </h3>
       <h3>Words per day to finish on time</h3>
       <h3>Hours worked so far: {{hours_worked}}</h3>
+      <form class="update" data-id={{id}}>
+        <fieldset>
+          <legend>Update your hours worked</legend>
+          <input type="text" name="projects[hours_worked]" placeholder="hours worked">
+          <input type="submit" name="submit" value="Update">
+        </fieldset>
+      </form>
       <h3>Estimated hours remaining</h3>
     </div>
 {{/project}}

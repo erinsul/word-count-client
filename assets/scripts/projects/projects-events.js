@@ -32,15 +32,23 @@ const onProjectDelete = () => {
   .done($(event.target).parent().remove());
 };
 
+const onProjectUpdate = (event) => {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  console.log(event.target);
+  api.updateProject(data, $(event.target).data('id'))
+  .done(ui.success)
+  // .fail(ui.failure);
+};
 
 const addHandlers = () => {
   $('#create').on('submit', onCreateProject);
   $('#show').on('click', onShowProjects);
   $('#content').on('click', '.view', onProjectDetails);
   $('#content').on('click', '.delete', onProjectDelete);
+  $('#content').on('submit', '.update', onProjectUpdate);
 };
 //
 module.exports = {
   addHandlers,
-  onProjectDetails
 };
