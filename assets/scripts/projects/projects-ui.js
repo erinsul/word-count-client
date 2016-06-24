@@ -2,23 +2,25 @@
 
 const app = require('../app.js');
 
+const createSuccess = (data) => {
+  let addTitle = require('../templates/add-title.handlebars');
+    $('#content').append(addTitle(data));
+    $('#create').children().children('input[type=text]').val('');
 
-const success = (data) => {
-  if (data) {
-    console.log(data);
-  } else {
-    console.log('Success');
-  }
 };
 
 const displayProjects = (projects) => {
   let titleListingTemplate = require('../templates/title-listing.handlebars');
   $('#content').html(titleListingTemplate(projects));
+  $('#show').hide();
+  $('#create').show();
 };
 
 const displayProjectDetails = (project) =>{
   let projectDisplay = require('../templates/project.handlebars');
-  $('#content').html(projectDisplay(project))
+  $('#content').html(projectDisplay(project));
+  $('#show').show();
+  $('#create').hide();
 };
 
 const displayDelete = (id) =>{
@@ -32,7 +34,7 @@ const failure = (error) => {
 };
 
 module.exports = {
-  success,
+  createSuccess,
   failure,
   displayProjects,
   displayProjectDetails

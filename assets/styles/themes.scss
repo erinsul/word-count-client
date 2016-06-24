@@ -1,0 +1,49 @@
+$margin: 20px;
+$font-family: 'Open Sans Condensed', sans-serif;
+$letter-spacing: 1em;
+$text-size: 1em;
+
+body {
+  font-family: $font-family;
+  letter-spacing: $letter-spacing * .5
+}
+
+#header {
+  text-align: center;
+  margin: $margin * 2;
+  margin-top: $margin * 5;
+  letter-spacing: $letter-spacing;
+  font-size: $text-size * 2;
+}
+
+#logo {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+}
+
+#page-title {
+  display: inline-block;
+}
+
+.before-sign-in {
+  text-align: center;
+}
+
+#sign-up,
+#sign-in {
+  text-align: center;
+  margin: $margin * 2
+}
+
+button {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color:#ededed;
+  padding:7px 25px;
+  border:1px solid #d6bcd6;
+  border-radius: 5px;
+  margin: $margin * .5;
+  letter-spacing: $letter-spacing * .3;
+  font-size: $text-size;
+}

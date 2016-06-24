@@ -10,11 +10,11 @@ const onCreateProject = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.createProject(data)
-  .done(ui.success)
+  .done(ui.createSuccess)
   .fail(ui.failure);
 };
 
-const onShowProjects = (event) => {
+const onShowProjects = () => {
   event.preventDefault();
   api.showProjects()
   .done(ui.displayProjects);
@@ -37,7 +37,7 @@ const onProjectUpdate = (event) => {
   let data = getFormFields(event.target);
   console.log(event.target);
   api.updateProject(data, $(event.target).data('id'))
-  .done(ui.success)
+  .done(onProjectDetails())
   // .fail(ui.failure);
 };
 
@@ -51,4 +51,5 @@ const addHandlers = () => {
 //
 module.exports = {
   addHandlers,
+  onShowProjects,
 };
