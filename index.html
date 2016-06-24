@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
-
+      <title>deadlines.</title>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+      <div id="header">
+        <img id="logo" src="./assets/images/hourglass.png" alt="hourglass"/>
+        <h1 id="page-title">deadlines</h1>
+      </div>
+      <div class ="before-sign-in">
+        <button id="open-sign-up">Sign Up!</button>
+        <button id="open-sign-in">Already have an account? Sign In</button>
+        <button id="sign-out" class="user-only">Sign out!</button>
+        <button id="open-change-password" class="user-only">Change Password</button>
+      </div>
       <article>
       <form id="sign-up">
         <fieldset>
-          <legend>Sign up!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
@@ -20,21 +29,13 @@
 
       <form id="sign-in">
         <fieldset>
-          <legend>Sign In!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" name="submit" value="Sign In">
         </fieldset>
       </form>
 
-      <form id="sign-out" class="user-only">
-        <fieldset>
-          <legend>Sign Out!</legend>
-          <input class="sign-out" type="submit" value="Sign Out">
-        </fieldset>
-      </form>
-
-      <form id="change-password" class="user-only">
+      <form id="change-password">
         <fieldset>
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Current Password">
@@ -44,18 +45,19 @@
       </form>
     </article>
     <article>
-    <form id="create" class="user-only">
-      <fieldset>
-        <legend>Create a new project</legend>
-        <input type="text" name="projects[title]" placeholder="title of project">
-        <input type="text" name="projects[end_date]" placeholder="target end date">
-        <input type="text" name="projects[total_word_count]" placeholder="word count goal">
-        <input type="submit" name="submit" value="Create!">
-      </fieldset>
-    </form>
-    <button id="show" class="user-only">Show all your projects!</button>
+
+    <button id="show">Back to all projects!</button>
   </article>
   <div id="content">
   </div>
-    </body>
+  <form id="create" class="user-only">
+    <fieldset>
+      <legend>Create a new project</legend>
+      <input type="text" name="projects[title]" placeholder="title of project">
+      <input type="text" name="projects[end_date]" placeholder="target end date">
+      <input type="text" name="projects[total_word_count]" placeholder="word count goal">
+      <input type="submit" name="submit" value="Create!">
+    </fieldset>
+  </form>
+  </body>
 </html>

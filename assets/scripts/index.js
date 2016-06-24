@@ -8,7 +8,12 @@ const authEvents = require('./auth/events.js');
 const projectEvents = require('./projects/projects-events.js');
 
 $(() => {
+  $('#sign-up').hide();
+  $('#sign-in').hide();
   $('.user-only').hide();
+  $('#change-password').hide();
+  $('#open-change-password').hide();
+  $('#show').hide();
   authEvents.addHandlers();
   projectEvents.addHandlers();
 });
