@@ -6,8 +6,11 @@ const createSuccess = (data) => {
   let addTitle = require('../templates/add-title.handlebars');
     $('#content').append(addTitle(data));
     $('#create').children().children('input[type=text]').val('');
-
 };
+
+const createFail = () => {
+
+}
 
 const displayProjects = (projects) => {
   let titleListingTemplate = require('../templates/title-listing.handlebars');
