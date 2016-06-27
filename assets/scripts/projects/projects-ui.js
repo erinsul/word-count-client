@@ -29,13 +29,8 @@ const displayDelete = (id) =>{
   $('').hide()
 }
 
-const failure = (error) => {
-  console.error(error);
-};
-
 module.exports = {
   createSuccess,
-  failure,
   displayProjects,
   displayProjectDetails
 };

@@ -11,7 +11,7 @@ const onSignUp = (event) => {
   let data = getFormFields(event.target);
   api.signUp(data)
   .done(ui.signUpSuccess)
-  .fail(ui.failure);
+  .fail(ui.signUpFail);
 };
 
 const onSignIn = (event) => {
@@ -19,14 +19,13 @@ const onSignIn = (event) => {
   let data = getFormFields(event.target);
   api.signIn(data)
   .done(ui.signInSuccess)
-  .fail(ui.failure);
+  .fail(ui.signInFail);
 };
 
 const onSignOut = (event) => {
   event.preventDefault();
   api.signOut()
   .done(ui.signOutSuccess)
-  .fail(ui.failure);
 };
 
 const onChangePassword = (event) => {
@@ -34,7 +33,7 @@ const onChangePassword = (event) => {
   let data = getFormFields(event.target);
   api.changePassword(data)
   .done(ui.changePasswordSuccess)
-  .fail(ui.failure);
+  .fail(ui.changePasswordFail);
 };
 
 const openSignUp = () =>{

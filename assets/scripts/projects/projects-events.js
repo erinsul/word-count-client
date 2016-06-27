@@ -38,7 +38,7 @@ const onProjectUpdate = (event) => {
   console.log(event.target);
   api.updateProject(data, $(event.target).data('id'))
   .done(onProjectDetails())
-  // .fail(ui.failure);
+  .fail(ui.failure);
 };
 
 const addHandlers = () => {
