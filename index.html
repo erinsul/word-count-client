@@ -10,12 +10,12 @@
       <div id="header">
         <img id="logo" src="./assets/images/hourglass.png" alt="hourglass"/>
         <h1 id="page-title">deadlines</h1>
+        <button id="sign-out" class="user-only">Sign out!</button>
+        <button id="open-change-password" class="user-only">Change Password</button>
       </div>
       <div class ="before-sign-in">
         <button id="open-sign-up">Sign Up!</button>
         <button id="open-sign-in">Already have an account? Sign In</button>
-        <button id="sign-out" class="user-only">Sign out!</button>
-        <button id="open-change-password" class="user-only">Change Password</button>
       </div>
       <article>
       <form id="sign-up">
@@ -44,18 +44,17 @@
         </fieldset>
       </form>
     </article>
-    <article>
-
-    <button id="show">Back to all projects!</button>
-  </article>
+  <div id="show-all">
+  <button id="show">Back to all projects!</button>
+  </div>
   <div id="content">
   </div>
   <form id="create" class="user-only">
     <fieldset>
       <legend>Create a new project</legend>
       <input type="text" name="projects[title]" placeholder="title of project">
-      <input type="text" name="projects[end_date]" placeholder="target end date">
-      <input type="text" name="projects[total_word_count]" placeholder="word count goal">
+      <input type="date" name="projects[end_date]" placeholder="target end date (yyyy-mm-dd)">
+      <input type="text" name="projects[total_word_count]" placeholder="word/page count goal">
       <input type="submit" name="submit" value="Create!">
     </fieldset>
   </form>

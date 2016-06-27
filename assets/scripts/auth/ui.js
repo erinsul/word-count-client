@@ -6,7 +6,6 @@ const projects = require('../projects/projects-events.js')
 const signUpSuccess = () => {
   $('#sign-up').hide();
   $('#sign-up').children().children('input[type=password], input[type=text]').val('');
-
 };
 
 const changePasswordSuccess = ()=>{
@@ -30,6 +29,7 @@ const signInSuccess = (data) => {
   $('#open-sign-up').hide();
   $('#open-sign-in').hide();
   $('#sign-in').hide();
+  $('#content').show();
   displayWelcome(data);
   projects.onShowProjects();
 };
@@ -45,6 +45,7 @@ const signOutSuccess = () => {
   $('.before-sign-in').children('#welcome').remove();
   $('#sign-in').children().children('input[type=password], input[type=text]').val('');
   $('#show').hide();
+  $('#content').hide();
 };
 
 module.exports = {

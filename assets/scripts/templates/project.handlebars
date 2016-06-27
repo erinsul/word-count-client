@@ -1,24 +1,28 @@
 {{#project}}
   <h1>{{title}}</h1>
-    <div>
-      <h3>Due on: {{end_date}}</h3>
+    <div id = "project-info">
+      <ul>
+      <li><p>Due on: {{end_date}}</p></li>
+      <li class><p class="form">Update your deadline:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <legend>Update your deadline:</legend>
-          <input type="text" name="projects[end_date]" placeholder="target end date">
+          <input type="date" name="projects[end_date]" placeholder="target end date (yyyy-mm-dd)">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
-      <h3>Days left: {{days_left}}</h3>
-      <h3>Current word count: {{current_word_count}}</h3>
+      </li>
+      <li><p>Days left: {{days_left}}</p></li>
+      <li><p>Current word count: {{current_word_count}}</p></li>
+      <li><p class="form">Update your word count:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <legend>Update your word count:</legend>
           <input type="text" name="projects[current_word_count]" placeholder="current word count">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
-      <h3>Words remaining: {{words_remaining}}</h3>
-      <h3>Words per day to finish on time: {{words_per_day}}</h3>
+      </li>
+      <li><p>Words remaining: {{words_remaining}}</p></li>
+      <li><p>Words per day to finish on time: {{words_per_day}}</p></li>
+    </ul>
     </div>
 {{/project}}

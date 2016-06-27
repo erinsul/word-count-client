@@ -14,6 +14,7 @@ $(() => {
   $('#change-password').hide();
   $('#open-change-password').hide();
   $('#show').hide();
+  $('#content').hide();
   authEvents.addHandlers();
   projectEvents.addHandlers();
 });

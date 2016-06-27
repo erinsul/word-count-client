@@ -5,3 +5,9 @@ body {
   background-color: $background-color;
   color: $text-color;
 }
+
+#content,
+#change-password,
+#create {
+  border: 2px solid lighten($text-color, 40%);
+}

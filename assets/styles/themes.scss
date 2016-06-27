@@ -12,8 +12,14 @@ body {
   text-align: center;
   margin: $margin * 2;
   margin-top: $margin * 5;
-  letter-spacing: $letter-spacing;
-  font-size: $text-size * 2;
+    h1{
+      letter-spacing: $letter-spacing;
+      font-size: $text-size * 2;
+  }
+  button{
+      text-align: right;
+      float: right;
+  }
 }
 
 #logo {
@@ -36,6 +42,20 @@ body {
   margin: $margin * 2
 }
 
+#content,
+#change-password,
+#create {
+  text-align: center;
+  padding: 20px;
+  width: 60%;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+#show-all {
+  text-align: center;
+}
+
 button {
   box-shadow: 3px 4px 0px 0px #899599;
   background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
@@ -46,4 +66,34 @@ button {
   margin: $margin * .5;
   letter-spacing: $letter-spacing * .3;
   font-size: $text-size;
+}
+
+input {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	padding:6px 24px;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+#project-info {
+  ul {
+    list-style-type: none;
+    li {
+      text-align: left;
+      p{
+        line-height: 1.4;
+        font-size: $text-size * 1.4;
+      }
+      form {
+        display: inline-block;
+    }
+    .form {
+      display: inline-block;
+    }
+    }
+  }
 }
