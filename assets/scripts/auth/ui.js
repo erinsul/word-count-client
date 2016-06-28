@@ -29,6 +29,12 @@ const changePasswordFail = () => {
 const displayWelcome = (user) => {
   let welcomeTemplate = require('../templates/homepage.handlebars');
   $('.before-sign-in').append(welcomeTemplate(user));
+  $('#words').on('click', function(){
+    $('.word').text('word');
+  })
+  $('#pages').on('click', function(){
+    $('.word').text('page');
+  })
 };
 
 const signInSuccess = (data) => {

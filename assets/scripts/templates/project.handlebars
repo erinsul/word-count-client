@@ -13,8 +13,8 @@
       <p class = "error-message"></p>
       </li>
       <li><p>Days left: {{days_left}}</p></li>
-      <li><p>Current word count: {{current_word_count}}</p></li>
-      <li><p class="form">Update your word count:</p>
+      <li><p>Current <span class="word">word</span> count: {{current_word_count}}</p></li>
+      <li><p class="form">Update your <span class="word">word</span> count:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
           <input type="text" name="projects[current_word_count]" placeholder="current word count">
@@ -22,8 +22,8 @@
         </fieldset>
       </form>
       </li>
-      <li><p>Words remaining: {{words_remaining}}</p></li>
-      <li><p>Words per day to finish on time: {{words_per_day}}</p></li>
+      <li><p><span class = "word">Word</span>s remaining: {{words_remaining}}</p></li>
+      <li><p><span class="word">Word</span>s per day to finish on time: {{words_per_day}}</p></li>
     </ul>
     </div>
 {{/project}}
