@@ -17,7 +17,7 @@
       <li><p class="form">Update your {{counter}} count:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <input type="text" name="projects[current_count]" placeholder="current word/page count">
+          <input type="text" name="projects[current_count]" placeholder="current count">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
@@ -25,7 +25,9 @@
       <li><p class="form">Change your total goal:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <input type="text" name="projects[total_count]" placeholder="total word/page goal">
+          <input type="text" name="projects[total_count]" placeholder="total goal">
+            <label for="page"> <input type="radio" name = "projects[counter]" value="page"/> pages</label>
+            <label for="word"> <input type="radio" name = "projects[counter]" value="word"/> words</label>
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
