@@ -13,11 +13,11 @@
       <p class = "error-message"></p>
       </li>
       <li><p>Days left: {{days_left}}</p></li>
-      <li><p>Current <span class="word">word</span> count: {{current_word_count}}</p></li>
-      <li><p class="form">Update your <span class="word">word</span> count:</p>
+      <li><p>Current {{counter}} count: {{current_count}}</p></li>
+      <li><p class="form">Update your {{counter}} count:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <input type="text" name="projects[current_word_count]" placeholder="current word/page count">
+          <input type="text" name="projects[current_count]" placeholder="current word/page count">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
@@ -25,13 +25,13 @@
       <li><p class="form">Change your total goal:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <input type="text" name="projects[total_word_count]" placeholder="total word/page goal">
+          <input type="text" name="projects[total_count]" placeholder="total word/page goal">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
       </li>
-      <li><p>Total <span class = "word">word</span><span class = "page">page</span>s remaining: {{words_remaining}}</p></li>
-      <li><p>You need to do {{words_per_day}} <span class="word">word</span><span class="word">word</span>s per day to finish on time.</p></li>
+      <li><p>Total {{counter}}s remaining: {{amount_remaining}}</p></li>
+      <li><p>You need to do {{amount_per_day}} {{counter}}s per day to finish on time.</p></li>
     </ul>
     </div>
 {{/project}}

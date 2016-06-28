@@ -9,6 +9,7 @@ const ui = require('./projects-ui');
 const onCreateProject = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
+  console.log(data);
   api.createProject(data)
   .done(ui.createSuccess)
   .fail(ui.createFail);

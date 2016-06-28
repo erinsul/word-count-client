@@ -56,7 +56,11 @@
       <legend>Create a new project</legend>
       <input type="text" name="projects[title]" placeholder="title of project">
       <input type="date" name="projects[end_date]" placeholder="target end date (yyyy-mm-dd)">
-      <input type="text" name="projects[total_word_count]" placeholder="word/page count goal">
+      <input type="text" name="projects[total_count]" placeholder="total goal">
+      <p>I want to track this project in
+        <label for="page"> <input type="radio" name = "projects[counter]" value="page"/> pages</label>
+        <label for="word"> <input type="radio" name = "projects[counter]" value="word"/> words</label>
+      </p>
       <input type="submit" name="submit" value="Create!">
     </fieldset>
     <p class = "error-message"></p>
