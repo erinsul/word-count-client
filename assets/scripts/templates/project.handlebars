@@ -1,5 +1,10 @@
 {{#project}}
   <h1>{{title}}</h1>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;">
+      {{percent}}%
+    </div>
+  </div>
     <div id = "project-info">
       <ul>
       <li><p>Due on: {{end_date}}</p></li>

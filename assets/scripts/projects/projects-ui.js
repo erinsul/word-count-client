@@ -1,7 +1,4 @@
 'use strict';
-
-const app = require('../app.js');
-
 const createSuccess = (data) => {
   let addTitle = require('../templates/add-title.handlebars');
     $('#content').append(addTitle(data));
@@ -11,11 +8,11 @@ const createSuccess = (data) => {
 
 const createFail = () => {
   $('#create').children('.error-message').text('Make sure all fields are filled out and the end date is in the future.');
-}
+};
 
 const updateDateFailWarning = () => {
   $('#project-info').children().children().children('.error-message').text('Make sure the deadline is in the future!');
-}
+};
 
 const displayProjects = (projects) => {
   let titleListingTemplate = require('../templates/title-listing.handlebars');
@@ -25,7 +22,10 @@ const displayProjects = (projects) => {
 };
 
 const displayProjectDetails = (project) =>{
+  project.project.percent = (project.project.current_count/project.project.total_count) * 100;
   let projectDisplay = require('../templates/project.handlebars');
+  let progressBar = require('../templates/progress.handlebars');
+  console.log(project);
   $('#content').html(projectDisplay(project));
   $('#show').show();
   $('#create').hide();
