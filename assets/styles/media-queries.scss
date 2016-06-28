@@ -1,0 +1,23 @@
+@media (max-width: 800px) {
+  #content,
+  #change-password,
+  #create {
+    width: 80%;
+  }
+}
+
+@media (max-width: 380px) {
+  #header > h1 {
+    font-size: $text-size * 1.5;
+  }
+
+  #welcome {
+    font-size: $text-size * 1.4;
+  }
+
+  #content,
+  #change-password,
+  #create {
+    width: 95%;
+  }
+}
