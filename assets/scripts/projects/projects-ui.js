@@ -23,9 +23,9 @@ const displayProjects = (projects) => {
 
 const displayProjectDetails = (project) =>{
   project.project.percent = (project.project.current_count/project.project.total_count) * 100;
+  project.project.amount_remaining = project.project.total_count - project.project.current_count;
+  project.project.amount_per_day = Math.round(project.project.amount_remaining / project.project.days_left);
   let projectDisplay = require('../templates/project.handlebars');
-  let progressBar = require('../templates/progress.handlebars');
-  console.log(project);
   $('#content').html(projectDisplay(project));
   $('#show').show();
   $('#create').hide();
