@@ -22,7 +22,7 @@ const displayProjects = (projects) => {
 };
 
 const displayProjectDetails = (project) =>{
-  project.project.percent = (project.project.current_count/project.project.total_count) * 100;
+  project.project.percent = Math.round((project.project.current_count/project.project.total_count) * 100);
   project.project.amount_remaining = project.project.total_count - project.project.current_count;
   project.project.amount_per_day = Math.round(project.project.amount_remaining / project.project.days_left);
   let projectDisplay = require('../templates/project.handlebars');
