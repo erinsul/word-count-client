@@ -16,9 +16,8 @@ body {
       letter-spacing: $letter-spacing;
       font-size: $text-size * 2;
   }
-  button{
-      text-align: right;
-      float: right;
+  #buttons{
+      display: inline-block;
   }
 }
 
