@@ -30,10 +30,12 @@ const displayWelcome = (user) => {
   let welcomeTemplate = require('../templates/homepage.handlebars');
   $('.before-sign-in').append(welcomeTemplate(user));
   $('#words').on('click', function(){
-    $('.word').text('word');
+    $('.word').show();
+    $('.page').hide();
   })
   $('#pages').on('click', function(){
-    $('.word').text('page');
+    $('.word').hide();
+    $('.page').show();
   })
 };
 
