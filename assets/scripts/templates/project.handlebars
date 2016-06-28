@@ -17,13 +17,13 @@
       <li><p class="form">Update your <span class="word">word</span> count:</p>
       <form class="update" data-id={{id}}>
         <fieldset>
-          <input type="text" name="projects[current_word_count]" placeholder="current word count">
+          <input type="text" name="projects[current_word_count]" placeholder="current word/page count">
           <input type="submit" name="submit" value="Update">
         </fieldset>
       </form>
       </li>
-      <li><p><span class = "word">Word</span>s remaining: {{words_remaining}}</p></li>
-      <li><p><span class="word">Word</span>s per day to finish on time: {{words_per_day}}</p></li>
+      <li><p>Total <span class = "word">word</span>s remaining: {{words_remaining}}</p></li>
+      <li><p>You need to do {{words_per_day}} <span class="word">word</span>s per day to finish on time.</p></li>
     </ul>
     </div>
 {{/project}}
