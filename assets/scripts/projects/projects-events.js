@@ -11,7 +11,7 @@ const onCreateProject = (event) => {
   let data = getFormFields(event.target);
   api.createProject(data)
   .done(ui.createSuccess)
-  .fail(ui.failure);
+  .fail(ui.createFail);
 };
 
 const onShowProjects = () => {
@@ -35,10 +35,9 @@ const onProjectDelete = () => {
 const onProjectUpdate = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
-  console.log(event.target);
   api.updateProject(data, $(event.target).data('id'))
-  .done(onProjectDetails())
-  // .fail(ui.failure);
+  .success(onProjectDetails())
+  .fail(ui.updateDateFailWarning);
 };
 
 const addHandlers = () => {

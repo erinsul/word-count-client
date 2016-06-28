@@ -5,11 +5,16 @@ const app = require('../app.js');
 const createSuccess = (data) => {
   let addTitle = require('../templates/add-title.handlebars');
     $('#content').append(addTitle(data));
-    $('#create').children().children('input[type=text]').val('');
+    $('#create').children().children('input[type=text], input[type=date]').val('');
+    $('#create').children('.error-message').text('');
 };
 
 const createFail = () => {
+  $('#create').children('.error-message').text('Make sure all fields are filled out and the end date is in the future.');
+}
 
+const updateDateFailWarning = () => {
+  $('#project-info').children().children().children('.error-message').text('Make sure the deadline is in the future!');
 }
 
 const displayProjects = (projects) => {
@@ -26,14 +31,14 @@ const displayProjectDetails = (project) =>{
   $('#create').hide();
 };
 
-const displayDelete = (id) =>{
-  console.log(id)
-  console.log("success")
-  $('').hide()
+const displayDelete = () =>{
+  $('').hide();
 }
 
 module.exports = {
   createSuccess,
   displayProjects,
-  displayProjectDetails
+  displayProjectDetails,
+  createFail,
+  updateDateFailWarning
 };

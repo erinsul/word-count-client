@@ -37,6 +37,7 @@ const signInSuccess = (data) => {
   $('#open-sign-up').hide();
   $('#open-sign-in').hide();
   $('#sign-in').hide();
+  $('#sign-up').hide();
   $('#content').show();
   displayWelcome(data);
   projects.onShowProjects();
@@ -49,7 +50,6 @@ const signInFail = () => {
 };
 
 const signOutSuccess = () => {
-  console.log('User signed out successfully');
   app.user = null;
   $('.user-only').hide();
   $('#content').html('');
@@ -61,6 +61,8 @@ const signOutSuccess = () => {
   $('#show').hide();
   $('#content').hide();
   $('#change-password').children('.error-message').text('');
+  $('#create').children('.error-message').text('');
+  $('#create').children().children('input[type=text], input[type=date]').val('');
 };
 
 module.exports = {
