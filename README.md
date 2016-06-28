@@ -1,4 +1,4 @@
-Link to live app:
+Link to live app: https://erinsul.github.io/word-count-client/
 
 Link to back-end repo: https://github.com/erinsul/word-count-api
 
