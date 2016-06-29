@@ -1,4 +1,4 @@
-Link to live app:
+Link to live app: https://erinsul.github.io/word-count-client/
 
 Link to back-end repo: https://github.com/erinsul/word-count-api
 
@@ -16,10 +16,9 @@ entered is in the future, not the past. I also added after the fact an additiona
 column in the database so that users could choose if they wanted to track a project's
 total pages or words, and that required some restructuring. I also moved most of
 the math that I originally had the back-end doing to the front end (except calculating
-the days remaining, because Ruby seemed more equipped to deal with dates than Javascript).
+the days remaining, because Ruby seemed better at dealing with dates than Javascript).
 Because the basic functionality was completed early, I also worked hard to try to
-make the styling neat and organized, also including custom styling on buttons, and
-limited use of bootstrap (only for a progress bar).
+make the styling neat and organized, incorporating handlebars,  including custom styling on buttons, and limited use of bootstrap (only used for a progress bar).
 
 Unsolved problems: No particularly pressing ones. For a more advanced version, though,
 I considered adding friends for users, and comments on the projects, so that users
@@ -35,3 +34,8 @@ tracking words or pages.
 As a user, I want to update my progress on my project.
 As a user, I want to be able to retrieve the stats for my project—word/page
 count, remaining, and work-per-day to reach my deadline.
+
+Initial wireframes (created before I actually started working,
+so there are minor differences with the final product) are in this repo:
+https://github.com/erinsul/word-count-client/blob/master/wireframe1.JPG
+https://github.com/erinsul/word-count-client/blob/master/wireframe2.JPG
