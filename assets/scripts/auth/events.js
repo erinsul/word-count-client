@@ -36,17 +36,17 @@ const onChangePassword = (event) => {
   .fail(ui.changePasswordFail);
 };
 
-const openSignUp = () =>{
+const openSignUp = (event) =>{
   event.preventDefault();
   $('#sign-up').toggle();
 }
 
-const openSignIn = () =>{
+const openSignIn = (event) =>{
   event.preventDefault();
   $('#sign-in').toggle();
 }
 
-const openChangePassword = () =>{
+const openChangePassword = (event) =>{
   event.preventDefault();
   $('#change-password').toggle();
 }
