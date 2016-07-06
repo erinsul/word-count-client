@@ -86,17 +86,17 @@ webpackJsonp([0],[
 	  api.changePassword(data).done(ui.changePasswordSuccess).fail(ui.changePasswordFail);
 	};
 
-	var openSignUp = function openSignUp() {
+	var openSignUp = function openSignUp(event) {
 	  event.preventDefault();
 	  $('#sign-up').toggle();
 	};
 
-	var openSignIn = function openSignIn() {
+	var openSignIn = function openSignIn(event) {
 	  event.preventDefault();
 	  $('#sign-in').toggle();
 	};
 
-	var openChangePassword = function openChangePassword() {
+	var openChangePassword = function openChangePassword(event) {
 	  event.preventDefault();
 	  $('#change-password').toggle();
 	};
